@@ -1,0 +1,10 @@
+/*Styles*/
+
+h2 {
+  text-align: center;
+  color: red;
+  font-family: verdana;
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}

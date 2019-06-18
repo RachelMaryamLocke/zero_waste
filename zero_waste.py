@@ -43,12 +43,8 @@ def answer1():
          Q4 = 3
 
     score = Q1+Q2+Q3+Q4
-    if score <=5:
-        return "Wow - you are so zero waste!!!"
-    elif score <= 11:
-        return "Hmmm... you know a bit, much room for improvement!"
-    else:
-        return "You are TERRIBLE at zero waste!"
+    return render_template("answer.html", Q1=Q1, Q2=Q2, Q3=Q3, Q4=Q4, score=score)
+
 
 
 app.run(debug=True)
