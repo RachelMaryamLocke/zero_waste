@@ -1,8 +1,17 @@
 <html>
 <head>
   <title> Page Title </title>
-  <link href="../static/css/bootstrap.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../static/css/answer.css"/>
 </head>
 <body>
 
@@ -89,35 +98,35 @@
           </div>
       </div>
   </div>
-  
+
   <div>
   {% if score <= 5 %}
-  <p class="overallscore">Wow - you are so zero waste!!!</p>
+  <h2 class="overallscore">Wow - you are so zero waste!!!</h2>
   {% elif score <= 11 %}
-  <p class="overallscore">Some work needed!!!</p>
+  <h2 class="overallscore">Some work needed!!!</h2>
   {% else %}
-  <p class="overallscore">You are TERRIBLE at zero waste!!!</p>
+  <h2 class="overallscore">You are TERRIBLE at zero waste!!!</h2>
   {% endif %}
   </div>
-  <h2>Thanks for taking our quiz! Please see some recommended resources based on your answers</h2>
+  <h3>Thanks for taking our quiz! Please see some recommended resources based on your answers</h3>
     <div>
-    {% if Q1 == 4 %}
-    To find out more about cutting down on household waste - click <a href="https://www.madeleineolivia.co.uk/blog/30-ways-to-reduce-your-waste">here</a>!
+    {% if Q1 == 4 or Q1 ==3 %}
+    <p>To find out more about cutting down on household waste - click <a href="https://www.madeleineolivia.co.uk/blog/30-ways-to-reduce-your-waste">here</a>!</p>
     {% endif %}
     </div>
     <div>
-    {% if Q2 == 4 %}
-    To find out more about Ecobricks, click <a href="https://www.ecobricks.org/">here</a>!
+    {% if Q2 == 4 or Q2 ==3 %}
+    <p>To find out more about Ecobricks, click <a href="https://www.ecobricks.org/">here</a>!</p>
     {% endif %}
     </div>
     <div>
     {% if Q3 == 3 %}
-    To learn about alternatives to plastic straws, click <a href="https://www.diffordsguide.com/encyclopedia/1405/cocktails/straws-10-alternatives-to-plastic-straws">here</a>!
+    <p>To learn about alternatives to plastic straws, click <a href="https://www.diffordsguide.com/encyclopedia/1405/cocktails/straws-10-alternatives-to-plastic-straws">here</a>!</p>
     {% endif %}
     </div>
     <div>
     {% if Q4 == 3 %}
-    To find alternatives to plastic carrier bags - click <a href="https://medium.com/@greenhandle/beatplasticpollution-top-5-alternative-green-shopping-bags-3303118ce9a">here</a>!
+    <p>To find alternatives to plastic carrier bags - click <a href="https://medium.com/@greenhandle/beatplasticpollution-top-5-alternative-green-shopping-bags-3303118ce9a">here</a>!</p>
     {% endif %}
     </div>
 </body>

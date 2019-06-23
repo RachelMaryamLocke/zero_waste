@@ -12,8 +12,11 @@ h3 {
   padding-top: 15px
 }
 
+.navbar {
+  background: none;
+}
 body {
-
+  background-image: url(../img/green.jpg);
   background-size: cover;
   background-attachment: fixed;
 }

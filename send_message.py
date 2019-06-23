@@ -10,7 +10,7 @@ def send_message(email):
   return requests.post(
     "https://api.mailgun.net/v3/{}/messages".format(mail_domain),
       auth=("api", mail_api_key),
-      data={"from": "Excited User <mailgun@{}>".format(mail_domain),
+      data={"from": "Zero Waste <mailgun@{}>".format(mail_domain),
         "to": [email],
-        "subject": "Greetings!",
-        "text": "message"})
+        "subject": "Welcome to Zero Waste!",
+        "text": "Thanks for signing up to our newsletter!"})
