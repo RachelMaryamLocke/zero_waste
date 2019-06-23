@@ -65,7 +65,7 @@ div #wasteimages {
 
 /* Style the back side */
 .flip-box-back {
-  background-image: url(../pictures/flour_chopping_board.jpg);
+  background-image: url(../img/grass_background.jpg);
   background-size: cover;
   color:black;
   font-family: 'Cookie', cursive;
