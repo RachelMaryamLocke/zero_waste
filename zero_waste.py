@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-import requests
-import sqlite3 as sql #Import Sqlite
+
+from send_message import send_message
 
 app = Flask("MyApp")
 
@@ -17,6 +17,13 @@ app = Flask("MyApp")
 def index(): #personally called this method index to represent the fact it will return the index page
     return render_template('sustainable.html') #render_template is a flask specific method that returns the html page you want to display
                                          #render_template .html files are stored in the templates folder (required for flask to work correctly)
+@app.route("/send", methods=["POST"])
+def send():
+  form_data = request.form
+  send_message(form_data["email"])
+  return "Greeting sent!"
+
+
 @app.route("/map") #same functionality as above
 def map():
     return render_template("map.html")
@@ -24,7 +31,15 @@ def map():
 @app.route("/quiz")
 def quiz():
     return render_template("quiz.html")
-    
+
+@app.route("/news")
+def news():
+    return render_template("legal_info.html")
+
+@app.route("/about")
+def about():
+    return render_template("about_us.html")
+
 @app.route("/answer", methods=["POST"])
 def answer1():
     Q1 = request.form['Q1']

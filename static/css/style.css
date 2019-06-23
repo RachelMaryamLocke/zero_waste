@@ -2,17 +2,25 @@
 
 h2 {
   text-align: center;
-  color: blue;
-  font-family: verdana;
   font-size: 30px;
-  letter-spacing: 2px;
   font-weight: bold;
+  padding-top: 60px
+}
+h3 {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px
 }
 
+body {
+
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 div #wasteimages {
 
-  padding: 40px;
+  padding: 60px;
 }
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
