@@ -7,7 +7,7 @@ def hello():
 @app.route("/quiz")
 def quiz():
     return render_template("quiz.html")
-@app.route("/answer1", methods=["POST"])
+@app.route("/answer", methods=["POST"])
 def answer1():
     Q1 = request.form['Q1']
     Q2 = request.form['Q2']
