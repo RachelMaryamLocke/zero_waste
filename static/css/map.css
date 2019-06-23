@@ -1,0 +1,29 @@
+#demo{
+    margin-top:55px;
+}
+#zero1{
+    width: 100%;
+    height: 100%
+}
+#zero2{
+    width: 100%;
+    height: 100%
+}
+#zero3{
+    width: 100%;
+    height: 100%
+}
+
+/* map needs width and height to appear */
+#map{
+	width: 900px;
+	max-width: 100%;
+    height: 550px;
+    text-align: center;
+}  
+#storeLocator{
+    margin-top: 100px;
+}
+.container{
+    margin-top: 100px;
+}
