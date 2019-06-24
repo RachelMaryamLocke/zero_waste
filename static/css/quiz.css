@@ -16,7 +16,7 @@ h3 {
   background: none;
 }
 body {
-  background-image: url(../img/green.jpg);
+  background-image: url(../img/confiers.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -65,20 +65,20 @@ div #wasteimages {
 
 /* Style the back side */
 .flip-box-back {
-  background-image: url(../img/grass_background.jpg);
+  background-image: url(../img/nature.jpg);
   background-size: cover;
   color:black;
   font-family: 'Cookie', cursive;
   font-size: 15px;
   font-weight: 350;
   transform: rotateY(180deg);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 p.waste-text {
   position: relative;
   top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
   font-size: 15px
 }

@@ -20,8 +20,9 @@ def index(): #personally called this method index to represent the fact it will 
 
 @app.route("/send", methods=["POST"])
 def send():
-  form_data = request.form
-  send_message(form_data["address"])
+  address = request.form["address"]
+  name = request.form["emailname"]
+  send_message(address, name)
   return "Thanks for Signing up! Please check your mailbox!"
 
 @app.route("/map") #same functionality as above
