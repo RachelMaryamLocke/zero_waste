@@ -1,0 +1,14 @@
+body{
+    background-image: url("https://content.thriveglobal.com/wp-content/uploads/2019/04/stoicism.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#noWaste{
+    max-width: 100%;
+}
+#cfgBanner{
+    margin-bottom: 100px;
+}
+p{
+    background: white;
+}
