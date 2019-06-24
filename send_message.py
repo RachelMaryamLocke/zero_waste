@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv() # This will load .env file as enviroment variables allowing you to continue developing locally as before
 
-def send_message(email):
+def send_message(email,name):
   mail_api_key= os.getenv("MAILGUN_API") # This will read necessary variables from enviroment variables
   mail_domain = os.getenv("MAILGUN_DOMAIN")
 
@@ -13,4 +13,4 @@ def send_message(email):
       data={"from": "Zero Waste <mailgun@{}>".format(mail_domain),
         "to": [email],
         "subject": "Welcome to Zero Waste!",
-        "text": "Thanks for signing up to our newsletter!"})
+        "text": "Hi {}, Thanks for signing up to our newsletter!".format(name)})

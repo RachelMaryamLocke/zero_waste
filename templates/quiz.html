@@ -16,7 +16,7 @@
   </head>
 <body>
   <!-- start of top bar -->
-  <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
       <a href="#" class ="navbar-brand">Zero Waste</a>
       <button class="navbar-toggler" data-toggle="collapse"
       data-target="#navbarcollapse"><span class="navbar-toggler-icon"></span></button>
@@ -42,63 +42,78 @@
           </ul>
       </div>
   </nav>
-  <div class="modal fade" id ="myModal">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title">Sign Up</h5>
-                  <button type="button" class="close" data-dismiss="modal">
-                      <span>&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <div class="container">
+
+<div class="modal fade" id ="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+
                           <form method="POST" action="/send">
                               <div class="form-group row">
-                                  <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                   <div class="col-sm-10">
                                   <input type="email" name="address" class="form-control" id="inputEmail3" placeholder="Email">
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
                                   <div class="col-sm-10">
-                                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                  <input type="text" name="emailname" class="form-control" id="inputPassword3" placeholder="Name">
                                   </div>
                               </div>
-                              <fieldset class="form-group">
-                                  <div class="row">
-                                  <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                                  <div class="col-sm-10">
-                                      <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                      <label class="form-check-label" for="gridRadios1">
-                                          Refill Shops
-                                      </label>
-                                      </div>
-                                      <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                      <label class="form-check-label" for="gridRadios2">
-                                          Reuseable Products
-                                      </label>
-                                      </div>
 
-                                  </div>
-                                  </div>
-                              <div class="form-group row">
-                                  <div class="col-sm-10">
-                                  <button type="submit" class="btn btn-primary">Sign up</button>
-                                  </div>
-                              </div>
-                          </form>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                  <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
-              </div>
-          </div>
-      </div>
-  </div>
+                            <fieldset class="form-group">
+                                <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Choices</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Refill Shops
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        Reuseable Products
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios3" value="option3">
+                                    <label class="form-check-label" for="gridRadios3">
+                                        Sustainable Brands
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios3" value="option3">
+                                    <label class="form-check-label" for="gridRadios3">
+                                        Zero-Waste News
+                                    </label>
+                                    </div>
+                                </div>
+                                </div>
+                                <br>
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">Sign up</button>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
   <!-- end of top bar -->
 
 <div class="container" class="jumbotron">
@@ -152,7 +167,7 @@
       <img class= "img-fluid" class="img-rounded" src='../static/images/home_waste.jpg'>
    </div>
     <div class="flip-box-back">
-     <p class="waste-text">Worldwide, we throw out 50 tonnes of waste per second</p>
+     <p class="waste-text" class = "font-weight-bold">Worldwide, we throw out 50 tonnes of waste per second</p>
    </div>
    </div>
  </div>
@@ -163,7 +178,7 @@
      <img class="img-fluid" class="img-rounded" src='../static/images/ecobricks.jpg'>
     </div>
    <div class="flip-box-back">
-     <p class="waste-text">Seeded Sourdough</p>
+     <p class="waste-text" class="font-weight-bold">Ecobricks are plastic bottles filled with the types of plastic waste we can’t recycle, and can be used for building projects</p>
    </div>
      </div>
    </div>
@@ -177,7 +192,7 @@
       <img class="img-fluid" class="img-rounded" src='../static/images/paper_straw.jpg'>
    </div>
     <div class="flip-box-back">
-     <p class="waste-text">Sourdough Baguette</p>
+     <p class="waste-text" class = "font-weight-bold">The UK consumes 8.5 BILLION plastic straws per year</p>
    </div>
      </div>
    </div>
@@ -185,10 +200,10 @@
       <div class="flip-box">
           <div class="flip-box-inner">
          <div class="flip-box-front">
-          <img class="img-fluid" class="img-rounded" src='../static/images/bags.jpg'>
+          <img class="img-fluid" class="img-rounded" src='..\static\img\reusable_bag.jpg'>
       </div>
         <div class="flip-box-back">
-        <p class="waste-text">Sourdough Baguette</p>
+        <p class="waste-text" class = "font-weight-bold">Since the UK brought in the single use plastic bag charge, usage has fallen 86%! </p>
       </div>
       </div>
     </div>
