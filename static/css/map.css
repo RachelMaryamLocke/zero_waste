@@ -27,3 +27,7 @@
 .container{
     margin-top: 100px;
 }
+body{
+background-image: url("../img/forest.jpg");
+max-width: 100%;
+}
