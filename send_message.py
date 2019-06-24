@@ -13,4 +13,4 @@ def send_message(email,name):
       data={"from": "Zero Waste <mailgun@{}>".format(mail_domain),
         "to": [email],
         "subject": "Welcome to Zero Waste!",
-        "text": "Thanks for signing up to our newsletter!"})
+        "text": "Hi {}, Thanks for signing up to our newsletter!".format(name)})
