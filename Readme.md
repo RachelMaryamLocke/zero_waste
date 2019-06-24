@@ -12,7 +12,7 @@ Quiz -
 Email - available on all HTML pages:
 1) Sends a welcome email to the recipient.
 2) Adds the person's name from the form
-
+3) Adds to the email which tick boxes the user has chosen
 Maps:
 
 News:
