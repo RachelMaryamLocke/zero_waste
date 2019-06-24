@@ -18,11 +18,16 @@ def index(): #personally called this method index to represent the fact it will 
     return render_template('sustainable.html') #render_template is a flask specific method that returns the html page you want to display
                                          #render_template .html files are stored in the templates folder (required for flask to work correctly)
 
-@app.route("/send", methods=["POST"])
+@app.route("/send", methods=["POST", "GET"])
 def send():
   address = request.form["address"]
   name = request.form["emailname"]
-  send_message(address, name)
+  option1= request.form.get('gridRadios1')
+  option2= request.form.get('gridRadios2')
+  option3= request.form.get('gridRadios3')
+  option4= request.form.get('gridRadios4')
+
+  send_message(address, name, option1,option2,option3,option4)
   return "Thanks for Signing up! Please check your mailbox!"
 
 @app.route("/map") #same functionality as above
