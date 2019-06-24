@@ -15,3 +15,7 @@ body{
 p{
     background: white;
 }
+#logo{
+    height: 70px;
+    padding: 0px;
+}

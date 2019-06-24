@@ -28,3 +28,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+#logo{
+  height: 70px;
+  padding: 0px;
+}

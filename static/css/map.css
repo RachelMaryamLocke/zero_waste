@@ -31,3 +31,7 @@ body{
 background-image: url("../img/forest.jpg");
 max-width: 100%;
 }
+#logo{
+    height: 70px;
+    padding: 0px;
+}

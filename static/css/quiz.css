@@ -82,3 +82,7 @@ p.waste-text {
   transform: translate(-50%, -10%);
   font-size: 15px
 }
+#logo{
+  height: 70px;
+  padding: 0px;
+}
