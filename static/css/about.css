@@ -1,0 +1,17 @@
+.container{
+    margin-top: 100px;
+}
+body{
+    background-image: url("../img/clouds-conifers-countryside-2397306.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#noWaste{
+    max-width: 100%;
+}
+#cfgBanner{
+    margin-bottom: 100px;
+}
+p{
+    background: white;
+}

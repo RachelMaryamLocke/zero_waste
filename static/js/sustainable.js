@@ -1,3 +1,4 @@
+//global variables
 var map;
 var markers = [];
 var stores = [];     
@@ -64,7 +65,7 @@ function searchLocations(event) {
     event.preventDefault(); //submit event has a default behaviour of refreshing the page, this will stop that.
     var location = document.getElementById("addressInput").value; //takes the value from the address input in the form
     var geocoder = new google.maps.Geocoder(); //geocoder is a class in the google maps javascript api
-    geocoder.geocode({address: location}, function(results, status) { //geocode method takes two arguments, an address and a callback function
+    geocoder.geocode({address: location}, function(results, status) { //geocode function takes two arguments, an address and a callback function
       if (status == google.maps.GeocoderStatus.OK) {
        searchLocationsNear(results[0].geometry.location);
       } else {
@@ -73,7 +74,7 @@ function searchLocations(event) {
     });
 
 
-function searchLocationsNear(center) {
+function searchLocationsNear(location) {
     clearLocations();
 
     // downloadUrl(searchUrl, function(data) {
@@ -94,15 +95,15 @@ function searchLocationsNear(center) {
     var destinationAddress;
 
     service.getDistanceMatrix({
-        origins: [{ lat: center.lat(), lng: center.lng()}],
-        destinations: stores.map(function(store) {
+        origins: [{ lat: location.lat(), lng: location.lng()}], //list containing latitude and longitude of location
+        destinations: stores.map(function(store) { //map is a function that can be applied to any list, it takes an argument which is a function to be applied to each element in the list
             return new google.maps.LatLng(        
                 parseFloat(store.location.lat),
                 parseFloat(store.location.lng))
         }),
         travelMode: 'DRIVING'
         }, callback);
-    
+
     function callback(response, status) {
             var destination = Math.min.apply(null, response.rows[0].elements.map(item => item.distance.value));
             var index = response.rows[0].elements.findIndex(item => item.distance.value === destination);
