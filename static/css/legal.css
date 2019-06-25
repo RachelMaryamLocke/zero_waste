@@ -11,3 +11,17 @@
     margin-right: 20px;
     text-emphasis: bold;
 }
+p{
+    font-family: 'Cutive Mono', monospace;  
+}
+h1{
+    font-family: 'Cutive Mono', monospace;  
+}
+#mainHead{
+    font-size: 50px;
+}
+body{
+    background-image: url("../img/legal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
