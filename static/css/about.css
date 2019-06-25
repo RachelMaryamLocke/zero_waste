@@ -2,21 +2,21 @@
     margin-top: 100px;
 }
 body{
-    background-image: url("../img/clouds-conifers-countryside-2397306.jpg");
+    background-image: url("../img/blue.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #noWaste{
+    margin-top: 200px;
     max-width: 100%;
 }
 #cfgBanner{
     margin-bottom: 100px;
 }
-p{
+.mainText{
     font-family: 'Cutive Mono', monospace;
-}
-strong{
-    font-family: 'Cutive Mono', monospace;
+    margin-left: 100px;
+    margin-right:100px;
 }
 #logo{
     height: 45px;
