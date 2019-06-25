@@ -2,6 +2,12 @@
     margin-top: 100px;   
 }
 #logo{
-    height: 70px;
-    padding: 0px;
+    height: 45px;
+    margin-bottom: -10px;
+    margin-right: -30px;
+}
+.nav-link{
+    font-family: 'Cutive Mono', monospace;
+    margin-right: 20px;
+    text-emphasis: bold;
 }
