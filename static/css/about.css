@@ -9,6 +9,8 @@ body{
 #noWaste{
     margin-top: 200px;
     max-width: 100%;
+    border-radius: 50%;
+    height: auto;
 }
 #cfgBanner{
     margin-bottom: 100px;
