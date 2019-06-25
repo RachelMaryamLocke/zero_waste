@@ -1,22 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="../static/css/map.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/map.css">
+    <link rel="icon" type="image/ico" href="../static/img/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Vesper+Libre&display=swap" rel="stylesheet">
+    <title>Find a Refill Store</title>
 </head>
 
 <body>
   <!-- start of top bar -->
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
       <a href="#" class ="navbar-brand">
-          <img id="logo" src="../static/img/logo.png">
+          <img id="logo" src="../static/img/evergreen.png">
       </a>
       <button class="navbar-toggler" data-toggle="collapse"
       data-target="#navbarcollapse"><span class="navbar-toggler-icon"></span></button>
@@ -36,7 +35,7 @@
                 </li>
                 <li>
                   <div id="signIn">
-                      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Newsletter Sign-up</button>
+                      <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Newsletter Sign-up</button>
                   </div>
               </li>
           </ul>
@@ -55,7 +54,6 @@
               </div>
               <div class="modal-body">
                   <div class="container">
-
                             <form method="POST" action="/send">
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
@@ -102,7 +100,7 @@
                                   <br>
                               <div class="form-group row">
                                   <div class="col-sm-10">
-                                  <button type="submit" class="btn btn-primary">Sign up</button>
+                                  <button type="submit" class="btn btn-primary">Sign-up</button>
                                   </div>
                               </div>
                           </form>
@@ -114,14 +112,17 @@
           </div>
       </div>
   </div>
-    <!-- end of top bar -->
+<!-- end of top bar -->
+
+<div id="heading">
+    <h1>Find Your Nearest Refill Store</h1>
+</div>
 
 <div class="container">
-    <div class="row">
+    <div class="row finder">
         <div class="col-sm-6">
-
             <div id="storeLocator" class="container">
-                    <form onsubmit="searchLocations(event)"> <!--submit generates an event object which contains details of the form that was submitted-->
+                    <form id="address" onsubmit="searchLocations(event)"> <!--submit generates an event object which contains details of the form that was submitted-->
                         <div class="form-group">
                             <label>Address</label>
                             <div>
@@ -132,8 +133,6 @@
                             <div>
                                 <button id="searchButton" type="submit" class="btn btn-primary">Search</button>
                             </div>
-                        <br><br><br>
-                        <div id="info_div"></div>
                         </div>
                     </form>
             </div>
@@ -152,6 +151,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../static/js/sustainable.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiHX9VS5OuCiSpZipUAjFdaKNLjEpKAKM&callback=initMap" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 

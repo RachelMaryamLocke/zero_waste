@@ -7,13 +7,15 @@ var service;
 
 function initMap() {
 
-	// pick center coordinates for your map
+	// sets center coordinates for map
     var myMapCenter = {lat: 51.427251, lng: -0.328046};
 
-	// create map and say which HTML element it should appear in
+	// creates map and says which HTML element it should appear in
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: myMapCenter,
-        zoom: 8});
+        zoom: 8,
+        mapTypeId: 'hybrid'
+    });
     
     infoWindow = new google.maps.InfoWindow();
     service = new google.maps.DistanceMatrixService();
@@ -32,33 +34,6 @@ function initMap() {
             hours: '11am to 9pm'
         }
     ];
-
-    // function markStore(storeInfo){
-
-    //     // Create a marker and set its position.
-    //     var marker = new google.maps.Marker({
-    //         map: map,
-    //         position: storeInfo.location,
-    //         title: storeInfo.name
-    //     });
-    
-    //     // show store info when marker is clicked
-    //     marker.addListener('click', function(){
-    //         showStoreInfo(storeInfo);
-    //     });
-    // }
-        
-    // // show store info in text box
-    // function showStoreInfo(storeInfo){
-
-    //     var info_div = document.getElementById('info_div');
-    //     info_div.innerHTML = 'Store name: '
-    //         + storeInfo.name
-    //         + '<br>Hours: ' + storeInfo.hours;
-    // };
-    // stores.forEach(function(store){
-    //     markStore(store);
-    // });
 }
 
 function searchLocations(event) {
@@ -76,20 +51,6 @@ function searchLocations(event) {
 
 function searchLocationsNear(location) {
     clearLocations();
-
-    // downloadUrl(searchUrl, function(data) {
-    // for (var i = 0; i < stores.length; i++) {
-    //     var name = stores[i].name;
-    //     var address = stores[i].address;
-    //     var hours = stores[i].hours;
-    //     var latlng = new google.maps.LatLng(
-    //         parseFloat(stores[i].location.lat),
-    //         parseFloat(stores[i].location.lng));
-        
-    //     console.log(name, address, latlng);
-    //     createMarker(latlng, name, address);
-    //     bounds.extend(latlng);
-    // }
 
     var bounds = new google.maps.LatLngBounds();
     var destinationAddress;
@@ -116,16 +77,8 @@ function searchLocationsNear(location) {
             createMarker(latlng, destinationAddress.name, destinationAddress.address);
             bounds.extend(latlng);
             map.fitBounds(bounds);
+            map.setZoom(19);
         }
-    
-    
-    // var latlng = new google.maps.LatLng(        
-    //     parseFloat(destinationAddress.location.lat),
-    //     parseFloat(destinationAddress.location.lng))
-    // createMarker(latlng, destinationAddress.name, destinationName.address);
-    // bounds.extend(latlng);
-    // map.fitBounds(bounds);
-    // });
     }
 
 function clearLocations() {
@@ -140,8 +93,13 @@ function createMarker(latlng, name, address) {
     var html = "<b>" + name + "</b> <br/>" + address;
     var marker = new google.maps.Marker({
         map: map,
-        position: latlng
+        position: latlng,
+        animation: google.maps.Animation.DROP,
+        icon: '../static/img/jar.png'
     });
+    infoWindow.setContent(html);
+    infoWindow.open(map, marker);
+
     google.maps.event.addListener(marker, 'click', function() {
         infoWindow.setContent(html);
         infoWindow.open(map, marker);
@@ -149,3 +107,20 @@ function createMarker(latlng, name, address) {
     markers.push(marker);
     }
   }
+
+//image scroll 
+
+$(window).scroll(function(){
+
+    var wScroll = $(this).scrollTop();
+
+    if(wScroll > $('.container').offset().top - ($(window).height() / 1.2)) {
+  
+      $('.container img').each(function(i){
+  
+        setTimeout(function(){
+        $('.container img').eq(i).addClass('is-showing');
+      }, 350 * (i+1));
+      });
+    }
+  });

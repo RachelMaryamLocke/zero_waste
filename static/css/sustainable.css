@@ -11,6 +11,68 @@
     width: 100%;
 }
 #logo{
-    height: 70px;
-    padding: 0px;
+    height: 45px;
+    margin-bottom: -10px;
+    margin-right: -30px;
+}
+.nav-link{
+    font-family: 'Cutive Mono', monospace;
+    margin-right: 20px;
+    text-emphasis: bold;
+}
+/*image grid*/
+
+.container img {
+    margin-top: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out;
+    display: block;
+    overflow: hidden;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+  .container .is-showing {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+  /*figcaption styling*/
+
+figcaption {
+    position: absolute;
+    font-family: 'Cutive Mono', monospace;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: large;
+    background: black;
+    color: white;
+    padding: 2px 8px;
+    opacity: 0;
+    bottom: 350px;
+    left: -100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.col-md-4:hover figcaption {
+    opacity: 1;
+    left: 0px;
+}
+
+img.img-fluid.rounded.is-showing:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    overflow: hidden;
+}
+
+.col-md-4 {
+    overflow: hidden;
+}
+#heading{
+    font-family: 'Cutive Mono', monospace;
+    text-align: center;
+    margin-top: 30px;
 }

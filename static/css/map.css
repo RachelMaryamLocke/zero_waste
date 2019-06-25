@@ -3,15 +3,15 @@
 }
 #zero1{
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 #zero2{
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 #zero3{
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 /* map needs width and height to appear */
@@ -22,12 +22,34 @@
     text-align: center;
 }  
 #storeLocator{
-    margin-top: 100px;
+    margin-top: 200px;
 }
 .container{
-    margin-top: 100px;
+    margin-top: 10px;
 }
 body{
 background-image: url("../img/forest.jpg");
 max-width: 100%;
+}
+#logo{
+    height: 45px;
+    margin-bottom: -10px;
+    margin-right: -30px;
+}
+#address{
+    margin-top: -200px;
+}
+div.finder{
+    margin-top: 50px;
+}
+#heading{
+    font-family: 'Cutive Mono', monospace;
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+}
+.nav-link{
+    font-family: 'Cutive Mono', monospace;
+    margin-right: 20px;
+    text-emphasis: bold;
 }
