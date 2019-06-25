@@ -13,7 +13,10 @@ body{
     margin-bottom: 100px;
 }
 p{
-    background: white;
+    font-family: 'Cutive Mono', monospace;
+}
+strong{
+    font-family: 'Cutive Mono', monospace;
 }
 #logo{
     height: 45px;

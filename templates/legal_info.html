@@ -17,129 +17,123 @@
 <body>
 	  <!-- start of top bar -->
 
-		<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
-		    <a href="#" class ="navbar-brand">
-		        <img id="logo" src="../static/img/evergreen.png">
-		    </a>
-		    <button class="navbar-toggler" data-toggle="collapse"
-		    data-target="#navbarcollapse"><span class="navbar-toggler-icon"></span></button>
-		    <div class="collapse navbar-collapse" id="navbarcollapse">
-		        <ul class="navbar-nav">
-		              <li class="navbar-item">
-		                  <a href="/about" class="nav-link">About Us</a>
-		              </li>
-		              <li class="navbar-item">
-		                  <a href="/news" class="nav-link">In The News</a>
-		              </li>
-		              <li class="navbar-item">
-		                  <a href="/quiz" class="nav-link">Take our Quiz!</a>
-		              </li>
-		              <li class="navbar-item">
-		                  <a href="/map" class="nav-link">Find Your Nearest Refill Shop!</a>
-		              </li>
-		              <li>
-		                <div id="signIn">
-		                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Newsletter Sign-up</button>
-		                </div>
-		            </li>
-		        </ul>
-		    </div>
-		</nav>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+	<a href="#" class ="navbar-brand">
+		<img id="logo" src="../static/img/evergreen.png">
+	</a>
+	<button class="navbar-toggler" data-toggle="collapse"
+	data-target="#navbarcollapse"><span class="navbar-toggler-icon"></span></button>
+	<div class="collapse navbar-collapse" id="navbarcollapse">
+		<ul class="navbar-nav">
+				<li class="navbar-item">
+					<a href="/about" class="nav-link">About Us</a>
+				</li>
+				<li class="navbar-item">
+					<a href="/news" class="nav-link">In The News</a>
+				</li>
+				<li class="navbar-item">
+					<a href="/quiz" class="nav-link">Take our Quiz!</a>
+				</li>
+				<li class="navbar-item">
+					<a href="/map" class="nav-link">Find Your Nearest Refill Shop!</a>
+				</li>
+				<li>
+				<div id="signIn">
+					<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Newsletter Sign-up</button>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
 
 
-		<div class="modal fade" id ="myModal">
-		    <div class="modal-dialog">
-		        <div class="modal-content">
-		            <div class="modal-header">
-		                <h5 class="modal-title">Sign In</h5>
-		                <button type="button" class="close" data-dismiss="modal">
-		                    <span>&times;</span>
-		                </button>
-		            </div>
-		            <div class="modal-body">
-		                <div class="container">
+<div class="modal fade" id ="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Sign In</h5>
+				<button type="button" class="close" data-dismiss="modal">
+					<span>&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
 
-		                          <form method="POST" action="/send">
-		                              <div class="form-group row">
-		                                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-		                                  <div class="col-sm-10">
-		                                  <input type="email" name="address" class="form-control" id="inputEmail3" placeholder="Email">
-		                                  </div>
-		                              </div>
-		                              <div class="form-group row">
-		                                  <label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
-		                                  <div class="col-sm-10">
-		                                  <input type="text" name="emailname" class="form-control" id="inputPassword3" placeholder="Name">
-		                                  </div>
-		                              </div>
-		                            <fieldset class="form-group">
-		                                <div class="row">
-		                                <legend class="col-form-label col-sm-2 pt-0">Choices</legend>
-		                                <div class="col-sm-10">
-		                                    <div class="form-check">
-		                                    <input class="form-check-input" type="checkbox" name="gridRadios1" id="gridRadios1" value="option1">
-		                                    <label class="form-check-label" for="gridRadios1">
-		                                        Refill Shops
-		                                    </label>
-		                                    </div>
-		                                    <div class="form-check">
-		                                    <input class="form-check-input" type="checkbox" name="gridRadios2" id="gridRadios2" value="option2">
-		                                    <label class="form-check-label" for="gridRadios2">
-		                                        Reuseable Products
-		                                    </label>
-		                                    </div>
-		                                    <div class="form-check">
-		                                    <input class="form-check-input" type="checkbox" name="gridRadios3" id="gridRadios3" value="option3">
-		                                    <label class="form-check-label" for="gridRadios3">
-		                                        Sustainable Brands
-		                                    </label>
-		                                    </div>
-		                                    <div class="form-check">
-		                                    <input class="form-check-input" type="checkbox" name="gridRadios4" id="gridRadios3" value="option3">
-		                                    <label class="form-check-label" for="gridRadios3">
-		                                        Zero-Waste News
-		                                    </label>
-		                                    </div>
-		                                </div>
-		                                </div>
-		                                <br>
-		                            <div class="form-group row">
-		                                <div class="col-sm-10">
-		                                <button type="submit" class="btn btn-primary">Sign up</button>
-		                                </div>
-		                            </div>
-		                        </form>
-		                </div>
-		            </div>
-		            <div class="modal-footer">
-		                <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
-		            </div>
-		        </div>
-		    </div>
+							<form method="POST" action="/send">
+								<div class="form-group row">
+									<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+									<div class="col-sm-10">
+									<input type="email" name="address" class="form-control" id="inputEmail3" placeholder="Email">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
+									<div class="col-sm-10">
+									<input type="text" name="emailname" class="form-control" id="inputPassword3" placeholder="Name">
+									</div>
+								</div>
+							<fieldset class="form-group">
+								<div class="row">
+								<legend class="col-form-label col-sm-2 pt-0">Choices</legend>
+								<div class="col-sm-10">
+									<div class="form-check">
+									<input class="form-check-input" type="checkbox" name="gridRadios1" id="gridRadios1" value="option1">
+									<label class="form-check-label" for="gridRadios1">
+										Refill Shops
+									</label>
+									</div>
+									<div class="form-check">
+									<input class="form-check-input" type="checkbox" name="gridRadios2" id="gridRadios2" value="option2">
+									<label class="form-check-label" for="gridRadios2">
+										Reuseable Products
+									</label>
+									</div>
+									<div class="form-check">
+									<input class="form-check-input" type="checkbox" name="gridRadios3" id="gridRadios3" value="option3">
+									<label class="form-check-label" for="gridRadios3">
+										Sustainable Brands
+									</label>
+									</div>
+									<div class="form-check">
+									<input class="form-check-input" type="checkbox" name="gridRadios4" id="gridRadios3" value="option3">
+									<label class="form-check-label" for="gridRadios3">
+										Zero-Waste News
+									</label>
+									</div>
+								</div>
+								</div>
+								<br>
+							<div class="form-group row">
+								<div class="col-sm-10">
+								<button type="submit" class="btn btn-primary">Sign up</button>
+								</div>
+							</div>
+						</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+			</div>
 		</div>
+	</div>
+</div>
   <!-- end of top bar -->
 
 
 <div id="main" class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="animated jackInTheBox">What does the law say about tackling waste?</h1>
-				<hr/>
-
-				<p> There have been several changes in policies made in tackling waste in the UK and Wales. Currently, there are 6 key features of UK waste policies being administered. Below are the key features: </p>
-
-				<div class="row">
-					<p>
-				  <div class="col">
-						<h1>1. Waste hierarchy</h1>
-						<hr/>
-						<h7><p>The UK-wide policies on waste are built on an EU concept known as the waste hierarchy. The waste hierarchy requires anyone managing waste to consider first prevention, preparing for reuse and recycling followed by other methods of recovery, for example energy recovery and, lastly, disposal. Prevention, preparing for reuse and recycling should be given priority order in any waste legislation and policy.</p></h7>
-            <br />
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZS_8p-6XC7U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
+				<h1 id="mainHead">What does the law say about tackling waste?</h1>
+				<p> There have been several changes in policies made in tackling waste in the UK and Wales. Currently, there are 6 key features of UK waste policies being administered. Below are the key features: </p>	<div class="row"><p>
+				<div class="col">
+					<hr/>
+					<h1>1. Waste hierarchy</h1>
+					<hr/>
+					<h7><p>The UK-wide policies on waste are built on an EU concept known as the waste hierarchy. The waste hierarchy requires anyone managing waste to consider first prevention, preparing for reuse and recycling followed by other methods of recovery, for example energy recovery and, lastly, disposal. Prevention, preparing for reuse and recycling should be given priority order in any waste legislation and policy.</p></h7>
+            		<br/>
+            		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZS_8p-6XC7U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 				</p>
-
-
 				 <div class="w-100"></div>
 				 <hr>
 					<p>
@@ -186,7 +180,7 @@
 					<hr/>
                     <h1>5. Shared responsibility</h1>
 					<hr/>
-					<h7>UK waste policies operate on the basis of "shared responsibility." Everyone generates some amount of waste, so everyone has a part to play in preventing further waste growth. All parts of society also have a responsibility to reuse, recycle and dispose of waste properly.</h7>
+					<p>UK waste policies operate on the basis of "shared responsibility." Everyone generates some amount of waste, so everyone has a part to play in preventing further waste growth. All parts of society also have a responsibility to reuse, recycle and dispose of waste properly.</p>
           <br />
 		  <iframe width="560" height="315" src="https://www.youtube.com/embed/awlxNxPamdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div></p>
