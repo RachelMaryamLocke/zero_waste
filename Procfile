@@ -1,0 +1,1 @@
+web: gunicorn zero_waste:app
