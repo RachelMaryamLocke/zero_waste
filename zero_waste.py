@@ -83,7 +83,3 @@ def answer1():
 
     score = Q1+Q2+Q3+Q4
     return render_template("answer.html", Q1=Q1, Q2=Q2, Q3=Q3, Q4=Q4, score=score)
-
-
-
-app.run(debug=True)
